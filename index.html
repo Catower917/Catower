@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>게시물 커뮤니티</title>
+    <style>
+      /* CSS 스타일 시트 */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      
+      .post {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .post h2 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>게시물 커뮤니티</h1>
+    </header>
+    <main>
+      <form id="post-form">
+        <h2>게시물 작성</h2>
+        <label for="title">제목:</label>
+        <input type="text" id="title" name="title"><br>
+        <label for="content">내용:</label>
+        <textarea id="content" name="content"></textarea><br>
+        <button type="submit">게시</button>
+      </form>
+      
+      <div id="post-list">
+        <!-- 여기에 게시물이 추가됩니다. -->
+      </div>
+    </main>
+    
+    <script>
+      // JavaScript 코드
+      const postForm = document.getElementById("post-form");
+      const postList = document.getElementById("post-list");
+      
+      postForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const title = this.title.value;
+        const content = this.content.value;
+        
+        if (title.trim() === "" || content.trim() === "") {
+          alert("제목과 내용을 입력해주세요.");
+          return;
+        }
+        
+        const post = document.createElement("div");
+        post.classList.add("post");
+        post.innerHTML = `
+          <h2>${title}</h2>
+          <p>${content}</p>
+        `;
+        postList.appendChild(post);
+        
+        this.reset();
+      });
+    </script>
+  </body>
+</html>
