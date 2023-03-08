@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CATOWER</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // 배경색을 무작위로 생성하는 함수
+        function getRandomColor() {
+            // 16진수 표기법으로 표현된 색상 코드 중 무작위로 선택
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+            return color;
+        }
+        // 1초마다 배경색 변경
+        setInterval(() => {
+            const container = document.querySelector(".container");
+            container.style.backgroundColor = getRandomColor();
+        }, 1000);      
+	</script>
 </head>
 <body>
     <div class="container">
