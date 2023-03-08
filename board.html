@@ -1,49 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catower - Board</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
-<body>
-    <div class="container">
-        <div class="links">
-            <a href="index.html" class="link">Home</a>
-            <a href="about.html" class="link">About</a>
-            <a href="history.html" class="link">History</a>
-            <a href="member.html" class="link">Member</a>
-            <a href="https://github.com/Catower917" class="link">Github</a>
-        </div>
-        <div class="content">
-            <h1>Catower Board</h1>
-            <form action="">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="date">Date:</label><br>
-                <input type="date" id="date" name="date"><br>
-                <label for="time">Time:</label><br>
-                <input type="time" id="time" name="time"><br>
-                <label for="content">Content:</label><br>
-                <textarea id="content" name="content"></textarea><br><br>
-                <input type="submit" value="Submit">
-            </form>
-            <br>
-            <hr>
-            <h2>Recent Posts</h2>
-            <ul>
-                <li>
-                    <h3>John Smith</h3>
-                    <p><small>Posted on March 8, 2023 at 3:45 PM</small></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at vestibulum nisl. Nulla commodo libero tortor, sit amet volutpat leo pellentesque eu. Integer sed sagittis enim. In dictum sed nibh eu molestie. Sed lobortis, turpis eget pretium blandit, odio ipsum malesuada magna, a ullamcorper odio ante eu ante.</p>
-                </li>
-                <li>
-                    <h3>Jane Doe</h3>
-                    <p><small>Posted on March 7, 2023 at 1:30 PM</small></p>
-                    <p>Phasellus feugiat orci eu gravida feugiat. Nunc id blandit ipsum. Integer vel laoreet leo. Nunc euismod leo vel ligula tincidunt euismod. Sed eget massa quis est gravida tincidunt sed a augue. Vestibulum consequat mi nec suscipit elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Integer et hendrerit leo. Mauris ac tristique sapien, nec egestas mauris. Curabitur id velit ullamcorper, pellentesque lorem eget, blandit ipsum. Nullam eget diam at diam blandit finibus quis ut urna. Etiam feugiat libero eu orci convallis, ut ultrices ipsum semper. Fusce eu sapien et felis facilisis scelerisque nec eget velit. </p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html> 
+    <title>게시판</title>
+    <style>
+      /* 스타일링 */
+      body {
+        font-family: sans-serif;
+      }
+      form {
+        margin: 50px auto;
+        max-width: 600px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      ul {
+        list-style: none;
+        margin: 50px auto;
+        max-width: 600px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+      li {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="title">제목</label>
+      <input type="text" id="title" name="title">
+
+      <label for="content">내용</label>
+      <textarea id="content" name="content"></textarea>
+
+      <button type="submit">작성하기</button>
+    </form>
+
+    <ul>
+      <li>
+        <h2>게시물 제목 1</h2>
+        <p>게시물 내용 1</p>
+      </li>
+      <li>
+        <h2>게시물 제목 2</h2>
+        <p>게시물 내용 2</p>
+      </li>
+      <li>
+        <h2>게시물 제목 3</h2>
+        <p>게시물 내용 3</p>
+      </li>
+    </ul>
+  </body>
+</html>
