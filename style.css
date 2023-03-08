@@ -1,40 +1,69 @@
-/* reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 전체 스타일 설정 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
 }
 
-/* container styles */
+/* 컨테이너 설정 */
 .container {
-    display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 헤더 설정 */
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 네비게이션 설정 */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #4CAF50;
+}
+
+/* 메인 설정 */
+main {
+  padding: 20px;
+  background-color: white;
+}
+
+/* 반응형 스타일 설정 */
+@media screen and (max-width: 600px) {
+  /* 네비게이션을 세로로 배치 */
+  nav {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-/* logo styles */
-.logo {
-    width: 80%;
-    max-width: 400px;
-    margin-bottom: 30px;
-}
-
-/* links styles */
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.link {
-    padding: 10px;
-    margin: 10px;
-    background-color: #303030;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
+  }
+  nav li {
+    margin-bottom: 5px;
+  }
 }
