@@ -15,17 +15,16 @@
 }
 
 /* logo styles */
-
 .logo {
     width: 80%;
     max-width: 400px;
     margin-bottom: 30px;
-    filter: brightness(100%);
-    transition: filter 0.3s ease-in-out;
+    transform: translateX(0);
+    transition: transform 0.2s ease-in-out;
 }
 
 .logo:hover {
-    filter: brightness(70%);
+    transform: translateX(-5px);
 }
 
 /* links styles */
