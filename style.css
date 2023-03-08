@@ -19,6 +19,12 @@
     width: 80%;
     max-width: 400px;
     margin-bottom: 30px;
+    transform: translateX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+    transform: translateX(-10px);
 }
 
 /* links styles */
