@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catower Security Study Grop</title>
+    <title>보안 스터디그룹</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="#">Catower Security Study Grop</a>
+        <a class="navbar-brand" href="#">보안 스터디그룹</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,26 +30,72 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
+    <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-md-8">
-                <h1>Catower Security Study Grop</h1>
-                <p>우리는 보안에 대한 이해와 관심을 공유하는 스터디그룹입니다. 함께 공부하고 발전하는 것을 목표로 하고 있습니다.</p>
-                <p>대외 성적 </p>
-                <a href="#" class="btn btn-primary">대외 활동</a>
+            <div class="col-md-3 col-lg-2">
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#section1">대외활동</a>
+                    <a class="nav-link" href="#section2">보안 공부</a>
+                </nav>
             </div>
-            <div class="col-md-4">
-                <img src="https://via.placeholder.com/300x300" alt="" class="img-fluid">
+            <div class="col-md-9 col-lg-10">
+                <section id="section1">
+                    <h1>대외활동</h1>
+                    <p>우리는 보안에 대한 이해와 관심을 공유하는 스터디그룹입니다. 함께 공부하고 발전하는 것을 목표로 하고 있습니다.</p>
+                </section>
+                <section id="section2">
+                    <h1>보안 공부</h1>
+                    <p>우리는 보안에 대한 이해와 관심을 공유하는 스터디그룹입니다. 함께 공부하고 발전하는 것을 목표로 하고 있습니다.</p>
+                </section>
             </div>
         </div>
     </div>
-
-    <footer class="bg-light mt-4 py-3">
+     <footer class="bg-light py-3">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h3>주소</h3>
-                    <p>서울특별시 강남구 테헤란로 1234</p>
+                <div class="col-md-6">
+                    <h5>대외활동</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#event1">보안 컨퍼런스</a></li>
+                        <li><a href="#event2">CTF 대회</a></li>
+                        <li><a href="#event3">해킹 캠프</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <h3>연락처</h3
+                <div class="col-md-6">
+                    <h5>보안 공부</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#study1">보안 기초 이론</a></li>
+                        <li><a href="#study2">해킹 기술</a></li>
+                        <li><a href="#study3">취약점 분석</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    &copy; 2023 보안 스터디그룹
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+</script>
