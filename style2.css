@@ -1,0 +1,43 @@
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.logo {
+max-width: 100%;
+height: auto;
+}
+
+.links {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-top: 20px;
+}
+
+.link {
+margin: 0 10px;
+color: #333;
+text-decoration: none;
+}
+
+.link.active {
+font-weight: bold;
+}
+
+.content {
+margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    flex-direction: column;
+    margin-top: 30px;
+    }
+  .link {
+    margin: 10px 0;
+    display: block;
+    text-align: right;
+    }
+}
