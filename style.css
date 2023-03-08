@@ -8,7 +8,7 @@
 /* container styles */
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: ;
     align-items: center;
     justify-content: center;
     height: 100vh;
