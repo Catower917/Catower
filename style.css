@@ -15,10 +15,17 @@
 }
 
 /* logo styles */
+
 .logo {
     width: 80%;
     max-width: 400px;
     margin-bottom: 30px;
+    filter: brightness(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.logo:hover {
+    filter: brightness(70%);
 }
 
 /* links styles */
