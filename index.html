@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CATOWER</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* cat styles */
+      .cat {
+        position: fixed;
+        bottom: 0;
+        left: -200px;
+        height: 100px;
+        z-index: -1;
+        animation: catwalk 20s linear infinite;
+      }
+
+      /* cat animation */
+      @keyframes catwalk {
+        0% {
+          transform: translateX(-200px);
+        }
+        100% {
+          transform: translateX(calc(100vw + 200px));
+        }
+      }
+    </style>
 </head>
 <body>
     <div class="container">
