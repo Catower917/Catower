@@ -8,7 +8,7 @@
 /* container styles */
 .container {
     display: flex;
-    flex-direction: ;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -24,18 +24,19 @@
 }
 
 .logo:hover {
-    transform: translateX(-10px);
+    transform: translateX(-15px);
 }
+
 
 /* links styles */
 .links {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* 한 줄에 가로 정렬 */
     justify-content: center;
-    flex-direction: row; /* 가로 정렬 */
 }
 
 .link {
+    flex: 1; /* 각 링크 동일한 너비 */
     padding: 10px;
     margin: 10px;
     background-color: #303030;
