@@ -27,18 +27,14 @@
     transform: translateX(-15px);
 }
 
+
 /* links styles */
 .links {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* 한 줄에 가로 정렬 */
     justify-content: center;
 }
 
-/* desktop screen styles */
-@media screen and (min-width: 768px) {
-  .links {
-    flex-wrap: nowrap;
-  }
 .link {
     flex: 1; /* 각 링크 동일한 너비 */
     padding: 10px;
@@ -49,23 +45,6 @@
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
-}
-
-/* mobile screen styles */
-@media screen and (max-width: 767px) {
-  .links {
-    flex-direction: column;
-  }
-  .link {
-    flex: none;
-    margin: 10px 0;
-    background-color: #303030;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-  }
 }
 
 .group-name {
