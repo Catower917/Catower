@@ -1,95 +1,104 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>게시판</title>
-    <style>
-      /* 스타일링 */
-      body {
-        font-family: sans-serif;
-      }
-      form {
-        margin: 50px auto;
-        max-width: 600px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f7f7f7;
-      }
-      label {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: bold;
-      }
-      input[type="text"],
-      textarea {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-      }
-      button {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #3e8e41;
-      }
-      ul {
-        list-style: none;
-        margin: 50px auto;
-        max-width: 600px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #fff;
-      }
-      li {
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      h2 {
-        margin-top: 0;
-      }
-      p {
-        margin-bottom: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <form>
-      <label for="title">제목</label>
-      <input type="text" id="title" name="title">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>게시판</title>
+  <style>
+    /* 스타일 */
+    form {
+      margin-bottom: 20px;
+    }
 
-      <label for="content">내용</label>
-      <textarea id="content" name="content"></textarea>
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-      <button type="submit">작성하기</button>
-    </form>
+    input[type="text"], textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 16px;
+    }
 
-    <ul>
-      <li>
-        <h2>게시물 제목 1</h2>
-        <p>게시물 내용 1</p>
-      </li>
-      <li>
-        <h2>게시물 제목 2</h2>
-        <p>게시물 내용 2</p>
-      </li>
-      <li>
-        <h2>게시물 제목 3</h2>
-        <p>게시물 내용 3</p>
-      </li>
-    </ul>
-  </body>
+    button[type="submit"] {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .post {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .post h2 {
+      margin-top: 0;
+    }
+
+    .post p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <form id="post-form">
+    <label for="title">제목:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="content">내용:</label>
+    <textarea id="content" name="content" rows="5" required></textarea>
+
+    <button type="submit">게시물 작성</button>
+  </form>
+
+  <div id="posts-container"></div>
+
+  <script>
+    const postForm = document.getElementById('post-form');
+    const postsContainer = document.getElementById('posts-container');
+
+    // 게시물 작성 이벤트 리스너 등록
+    postForm.addEventListener('submit', e => {
+      e.preventDefault(); // 기본 동작 취소
+
+      // 작성된 게시물 생성
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value;
+      const post = createPost(title, content);
+
+      // 게시물 추가
+      postsContainer.appendChild(post);
+
+      // 작성된 게시물을 서버에 전송하는 코드 추가
+      // ...
+
+      // 작성 폼 초기화
+      postForm.reset();
+    });
+
+    // 작성된 게시물을 보여주는 함수
+    function createPost(title, content) {
+      const post = document.createElement('div');
+      post.classList.add('post');
+
+      const postTitle = document.createElement('h2');
+      postTitle.textContent = title;
+
+      const postContent = document.createElement('p');
+      postContent.textContent = content;
+
+      post.appendChild(postTitle);
+      post.appendChild(postContent);
+
+      return post;
+    }
+  </script>
+</body>
 </html>
