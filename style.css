@@ -39,10 +39,16 @@
   .links {
     flex-wrap: nowrap;
   }
-  .link {
-    flex: 1;
+.link {
+    flex: 1; /* 각 링크 동일한 너비 */
+    padding: 10px;
     margin: 10px;
-  }
+    background-color: #303030;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 /* mobile screen styles */
@@ -53,6 +59,12 @@
   .link {
     flex: none;
     margin: 10px 0;
+    background-color: #303030;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
   }
 }
 
